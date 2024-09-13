@@ -1,0 +1,108 @@
+<?php
+add_action( 'init', function() {
+    register_taxonomy( 'genre', array(
+        0 => 'album',
+    ), array(
+        'labels' => array(
+            'name' => 'Genres',
+            'singular_name' => 'Genre',
+            'menu_name' => 'Genres',
+            'all_items' => 'All Genres',
+            'edit_item' => 'Edit Genre',
+            'view_item' => 'View Genre',
+            'update_item' => 'Update Genre',
+            'add_new_item' => 'Add New Genre',
+            'new_item_name' => 'New Genre Name',
+            'search_items' => 'Search Genres',
+            'not_found' => 'No genres found',
+            'no_terms' => 'No genres',
+            'items_list_navigation' => 'Genres list navigation',
+            'items_list' => 'Genres list',
+            'back_to_items' => '← Go to genres',
+            'item_link' => 'Genre Link',
+            'item_link_description' => 'A link to a genre',
+        ),
+        'public' => true,
+        'hierarchical' => true,
+        'show_in_menu' => true,
+        'show_in_rest' => true,
+    ) );
+
+    register_taxonomy( 'single', array(
+        0 => 'album',
+    ), array(
+        'labels' => array(
+            'name' => 'Singles',
+            'singular_name' => 'Single',
+            'menu_name' => 'Singles',
+            'all_items' => 'All Singles',
+            'edit_item' => 'Edit Single',
+            'view_item' => 'View Single',
+            'update_item' => 'Update Single',
+            'add_new_item' => 'Add New Single',
+            'new_item_name' => 'New Single Name',
+            'search_items' => 'Search Singles',
+            'popular_items' => 'Popular Singles',
+            'separate_items_with_commas' => 'Separate singles with commas',
+            'add_or_remove_items' => 'Add or remove singles',
+            'choose_from_most_used' => 'Choose from the most used singles',
+            'not_found' => 'No singles found',
+            'no_terms' => 'No singles',
+            'items_list_navigation' => 'Singles list navigation',
+            'items_list' => 'Singles list',
+            'back_to_items' => '← Go to singles',
+            'item_link' => 'Single Link',
+            'item_link_description' => 'A link to a single',
+        ),
+        'public' => true,
+        'show_in_menu' => true,
+        'show_in_rest' => true,
+    ) );
+} );
+
+add_action( 'init', function() {
+    register_post_type( 'album', array(
+        'labels' => array(
+            'name' => 'Albums',
+            'singular_name' => 'Album',
+            'menu_name' => 'Album',
+            'all_items' => 'All Album',
+            'edit_item' => 'Edit Album',
+            'view_item' => 'View Album',
+            'view_items' => 'View Album',
+            'add_new_item' => 'Add New Album',
+            'add_new' => 'Add New Album',
+            'new_item' => 'New Album',
+            'parent_item_colon' => 'Parent Album:',
+            'search_items' => 'Search Album',
+            'not_found' => 'No album found',
+            'not_found_in_trash' => 'No album found in Trash',
+            'archives' => 'Album Archives',
+            'attributes' => 'Album Attributes',
+            'insert_into_item' => 'Insert into album',
+            'uploaded_to_this_item' => 'Uploaded to this album',
+            'filter_items_list' => 'Filter album list',
+            'filter_by_date' => 'Filter album by date',
+            'items_list_navigation' => 'Album list navigation',
+            'items_list' => 'Album list',
+            'item_published' => 'Album published.',
+            'item_published_privately' => 'Album published privately.',
+            'item_reverted_to_draft' => 'Album reverted to draft.',
+            'item_scheduled' => 'Album scheduled.',
+            'item_updated' => 'Album updated.',
+            'item_link' => 'Album Link',
+            'item_link_description' => 'A link to a album.',
+        ),
+        'public' => true,
+        'show_in_rest' => true,
+        'menu_icon' => 'dashicons-spotify',
+        'supports' => array(
+            0 => 'title',
+            1 => 'editor',
+            2 => 'thumbnail',
+            3 => 'custom-fields',
+        ),
+        'delete_with_user' => false,
+    ) );
+} );
+

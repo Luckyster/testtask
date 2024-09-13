@@ -1,0 +1,20 @@
+// Plugins/Libs.
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/reboot';
+
+// Theme components.
+@import 'components/vars';
+@import 'components/typography';
+@import 'components/filters';
+
+// Theme base styles.
+@import 'components/base';
+
+// Theme common styles.
+@import 'common/header/header';
+@import 'common/single/single';
+
+// Other styles. Please headline each group of your custom styles, for example:
+// ACF Flexible content styles.
