@@ -3,7 +3,9 @@
 ## Interesting pathes for you:
 - /wp-content/themes/testtask/includes/shortcodes.php - shortcodes logic + filters handler logic
 - /wp-content/themes/testtask/src/js/filters.js - js for filters
-
+### Sortcodes examples:
+- [albums count="10"]
+- [albums_with_singles]
 ### Run the project
 1. Copy the `wp-content` folder to a new WordPress setup.
 2. Import the SQL file via phpMyAdmin.
