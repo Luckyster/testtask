@@ -2,16 +2,22 @@
   &__grid {
     display: flex;
     gap: 30px;
+    justify-content: center;
   }
   &__title {
     text-align: center;
   }
   &__thumb {
-    width: 65%;
+    width: 35%;
     img {
+      width: 100%;
+      object-fit: cover;
       border-radius: 15px;
       overflow: hidden;
     }
+  }
+  &__custom-fields {
+    padding-top: 20px;
   }
 }
 .custom-fields {

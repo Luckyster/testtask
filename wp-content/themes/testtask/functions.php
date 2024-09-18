@@ -23,7 +23,7 @@ function load_theme_dependencies(){
 	);
 
     include get_template_directory() . '/includes/post-types.php';
-
+    include get_template_directory() . '/includes/repeater_field.php';
     include get_template_directory() . '/includes/shortcodes.php';
 }
 
@@ -36,7 +36,8 @@ function init_theme(){
 	remove_action( 'wp_enqueue_scripts', 'wp_enqueue_global_styles' );
 	remove_action( 'wp_body_open', 'wp_global_styles_render_svg_filters' );
 
-	load_theme_textdomain( 'theme_name', get_stylesheet_directory() . '/languages' );
+    // Disable Gutenberg editor for all post types
+    add_filter('use_block_editor_for_post', '__return_false', 10);
 
 	// Manage the document title - WordPress automatically add title
 	add_theme_support( 'title-tag' );

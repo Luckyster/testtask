@@ -319,7 +319,9 @@ b, strong {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px; }
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .album-filter__btn-wrapper {
   display: -webkit-box;
@@ -339,7 +341,7 @@ b, strong {
   font-weight: 600; }
 
 .album {
-  width: 33.33%;
+  width: calc(33.33% - 20px);
   position: relative; }
   .album__thumbnail {
     position: relative;
@@ -470,16 +472,25 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px; }
+  gap: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .album-detail__title {
   text-align: center; }
 
 .album-detail__thumb {
-  width: 65%; }
+  width: 35%; }
   .album-detail__thumb img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
     border-radius: 15px;
     overflow: hidden; }
+
+.album-detail__custom-fields {
+  padding-top: 20px; }
 
 .custom-fields {
   display: -webkit-box;

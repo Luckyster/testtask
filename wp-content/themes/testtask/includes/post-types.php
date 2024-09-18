@@ -100,7 +100,6 @@ add_action( 'init', function() {
             0 => 'title',
             1 => 'editor',
             2 => 'thumbnail',
-            3 => 'custom-fields',
         ),
         'delete_with_user' => false,
     ) );

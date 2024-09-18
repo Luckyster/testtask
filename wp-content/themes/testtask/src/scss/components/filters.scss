@@ -2,6 +2,7 @@
   &__list {
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
   }
   &__btn-wrapper {
     display: flex;
@@ -19,7 +20,7 @@
   }
 }
 .album {
-  width: 33.33%;
+  width: calc(33.33% - 20px);
   position: relative;
   &__thumbnail {
     position: relative;
