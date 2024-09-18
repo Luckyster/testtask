@@ -1,5 +1,5 @@
 # Some Test Task
-Creds: Wordpress / Wordpress
+Admin Creds: wordpress / wordpress
 ## Interesting pathes for you:
 - /wp-content/themes/testtask/includes/shortcodes.php - shortcodes logic + filters handler logic
 - /wp-content/themes/testtask/src/js/filters.js - js for filters
