@@ -1,5 +1,5 @@
 # Some Test Task
-
+Creds: Wordpress / Wordpress
 ## Interesting pathes for you:
 - /wp-content/themes/testtask/includes/shortcodes.php - shortcodes logic + filters handler logic
 - /wp-content/themes/testtask/src/js/filters.js - js for filters
@@ -11,13 +11,13 @@
 2. Import the SQL file via phpMyAdmin.
 3. Run the following SQL query to update the domain:
 ```sql
-UPDATE wp_options SET option_value = replace(option_value, 'http://localhost:100034', 'YOUR NEW DOMAIN') WHERE option_name = 'home' OR option_name = 'siteurl';
+UPDATE wp_options SET option_value = replace(option_value, 'http://localhost:10003', 'YOUR NEW DOMAIN') WHERE option_name = 'home' OR option_name = 'siteurl';
 
-UPDATE wp_posts SET guid = replace(guid, 'http://localhost:100034','YOUR NEW DOMAIN');
+UPDATE wp_posts SET guid = replace(guid, 'http://localhost:10003','YOUR NEW DOMAIN');
 
-UPDATE wp_posts SET post_content = replace(post_content, 'http://localhost:100034', 'YOUR NEW DOMAIN');
+UPDATE wp_posts SET post_content = replace(post_content, 'http://localhost:10003', 'YOUR NEW DOMAIN');
 
-UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://localhost:100034','YOUR NEW DOMAIN');
+UPDATE wp_postmeta SET meta_value = replace(meta_value,'http://localhost:10003','YOUR NEW DOMAIN');
 ```
 That's all. If you want to compile JS and SCSS, follow these steps:
 
