@@ -3,12 +3,13 @@ Creds: Wordpress / Wordpress
 ## Interesting pathes for you:
 - /wp-content/themes/testtask/includes/shortcodes.php - shortcodes logic + filters handler logic
 - /wp-content/themes/testtask/src/js/filters.js - js for filters
+- /wp-content/themes/testtask/includes/repeater_field.php - meta field for adding custom fields by the user
 ### Sortcodes examples:
 - [albums count="10"]
 - [albums_with_singles]
 ### Run the project
 1. Copy the `wp-content` folder to a new WordPress setup.
-2. Import the SQL file via phpMyAdmin.
+2. Import the SQL file([local.sql.gz](local.sql.gz)) via phpMyAdmin.
 3. Run the following SQL query to update the domain:
 ```sql
 UPDATE wp_options SET option_value = replace(option_value, 'http://localhost:10003', 'YOUR NEW DOMAIN') WHERE option_name = 'home' OR option_name = 'siteurl';
