@@ -11,7 +11,6 @@ function my_album_custom_fields_meta_box() {
 add_action('add_meta_boxes', 'my_album_custom_fields_meta_box');
 
 function my_repeater_meta_box_html($post) {
-    // Retrieve existing values from the database
     $custom_fields_data = get_post_meta($post->ID, 'custom_fields_data', true);
     wp_nonce_field('my_album_custom_fields_nonce', 'my_album_custom_fields_nonce_field');
     ?>
@@ -115,12 +114,10 @@ function save_my_album_custom_fields($post_id) {
         return;
     }
 
-    // Check user permissions
     if (!current_user_can('edit_post', $post_id)) {
         return;
     }
 
-    // Save the data
     if (isset($_POST['custom_fields_data'])) {
         $custom_fields_data = array();
         foreach ($_POST['custom_fields_data'] as $field) {
